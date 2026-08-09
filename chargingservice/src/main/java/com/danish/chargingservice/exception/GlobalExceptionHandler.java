@@ -15,5 +15,11 @@ public class GlobalExceptionHandler {
                 .body(ex.getMessage());
     }
 
+    @ExceptionHandler(MeterNotFoundException.class)
+    public ResponseEntity<String> handleMeterNotFoundException(MeterNotFoundException ex){
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(ex.getMessage());
+    }
+
 
 }

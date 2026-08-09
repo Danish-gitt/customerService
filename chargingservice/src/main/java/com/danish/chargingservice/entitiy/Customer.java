@@ -8,6 +8,8 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="customer")
@@ -41,6 +43,9 @@ public class Customer {
     @UpdateTimestamp
     @Column(name="updatedOn",nullable = false)
     private LocalDateTime updatedOn;
+
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
+    private List<Topup> topups = new ArrayList<>();
 
 
 }

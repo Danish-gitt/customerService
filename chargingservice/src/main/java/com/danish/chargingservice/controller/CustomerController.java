@@ -5,20 +5,19 @@ import com.danish.chargingservice.dto.CustomerResponse;
 import com.danish.chargingservice.entitiy.Customer;
 import com.danish.chargingservice.enums.MeterStatus;
 import com.danish.chargingservice.service.CustomerManagement;
+import com.danish.chargingservice.service.TopupService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/customer")
 @RequiredArgsConstructor
 public class CustomerController {
     private final CustomerManagement customerManagement;
+    private final TopupService topupService;
 
     @PostMapping("/add")
     public ResponseEntity<CustomerResponse> addCustomer(@Valid @RequestBody CustomerRequest customerRequest){
@@ -32,6 +31,11 @@ public class CustomerController {
         response.setMeterStatus(MeterStatus.INACTIVE);
         response.setBalance(savedCustomer.getBalance());
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    @PostMapping("/topup/{meterNumber}/{amount}")
+    public ResponseEntity<CustomerResponse> topup(@PathVariable Long meterNumber,@PathVariable int amount){
+        return ResponseEntity.status(HttpStatus.CREATED).body(topupService.addBalance(meterNumber,amount));
     }
 
 

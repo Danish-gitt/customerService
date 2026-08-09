@@ -86,3 +86,120 @@
 2026-08-09T01:05:10.882+05:30  INFO 2812 --- [chargingservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-08-09T01:05:10.898+05:30  INFO 2812 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-08-09T01:05:11.279+05:30  INFO 2812 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-09T05:47:22.164+05:30  INFO 11172 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : Starting ChargingserviceApplication using Java 25.0.1 with PID 11172 (C:\Users\Danish\Downloads\chargingservice\chargingservice\target\classes started by Danish in C:\Users\Danish\Downloads\chargingservice)
+2026-08-09T05:47:22.179+05:30  INFO 11172 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T05:47:25.333+05:30  INFO 11172 --- [chargingservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T05:47:25.531+05:30  INFO 11172 --- [chargingservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 168 ms. Found 2 JPA repository interfaces.
+2026-08-09T05:47:27.028+05:30  INFO 11172 --- [chargingservice] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-08-09T05:47:27.063+05:30  INFO 11172 --- [chargingservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T05:47:27.064+05:30  INFO 11172 --- [chargingservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-09T05:47:27.199+05:30  INFO 11172 --- [chargingservice] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4802 ms
+2026-08-09T05:47:27.675+05:30  INFO 11172 --- [chargingservice] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T05:47:27.795+05:30  INFO 11172 --- [chargingservice] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-08-09T05:47:29.013+05:30  INFO 11172 --- [chargingservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T05:47:29.101+05:30  INFO 11172 --- [chargingservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-09T05:47:29.493+05:30  INFO 11172 --- [chargingservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@44aeae34
+2026-08-09T05:47:29.497+05:30  INFO 11172 --- [chargingservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-09T05:47:29.682+05:30  INFO 11172 --- [chargingservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/chargingservice]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.11
+	Default catalog/schema: chargingservice/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T05:47:32.385+05:30  INFO 11172 --- [chargingservice] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T05:47:32.730+05:30  INFO 11172 --- [chargingservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T05:47:32.975+05:30  INFO 11172 --- [chargingservice] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-09T05:47:33.833+05:30  WARN 11172 --- [chargingservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-09T05:47:34.643+05:30  INFO 11172 --- [chargingservice] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-08-09T05:47:34.656+05:30  INFO 11172 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : Started ChargingserviceApplication in 14.528 seconds (process running for 16.552)
+2026-08-09T05:52:47.046+05:30  INFO 11172 --- [chargingservice] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-09T05:52:47.090+05:30  INFO 11172 --- [chargingservice] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-09T05:52:47.103+05:30  INFO 11172 --- [chargingservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T05:52:47.108+05:30  INFO 11172 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-09T05:52:47.124+05:30  INFO 11172 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-09T05:53:14.727+05:30  INFO 5284 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : Starting ChargingserviceApplication using Java 25.0.1 with PID 5284 (C:\Users\Danish\Downloads\chargingservice\chargingservice\target\classes started by Danish in C:\Users\Danish\Downloads\chargingservice)
+2026-08-09T05:53:14.760+05:30  INFO 5284 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T05:53:18.333+05:30  INFO 5284 --- [chargingservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T05:53:18.632+05:30  INFO 5284 --- [chargingservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 260 ms. Found 2 JPA repository interfaces.
+2026-08-09T05:53:20.587+05:30  INFO 5284 --- [chargingservice] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-08-09T05:53:20.628+05:30  INFO 5284 --- [chargingservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T05:53:20.628+05:30  INFO 5284 --- [chargingservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-09T05:53:20.789+05:30  INFO 5284 --- [chargingservice] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5809 ms
+2026-08-09T05:53:21.332+05:30  INFO 5284 --- [chargingservice] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T05:53:21.553+05:30  INFO 5284 --- [chargingservice] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-08-09T05:53:23.288+05:30  INFO 5284 --- [chargingservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T05:53:23.424+05:30  INFO 5284 --- [chargingservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-09T05:53:24.170+05:30  INFO 5284 --- [chargingservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5560b64d
+2026-08-09T05:53:24.176+05:30  INFO 5284 --- [chargingservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-09T05:53:24.595+05:30  INFO 5284 --- [chargingservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/chargingservice]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.11
+	Default catalog/schema: chargingservice/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T05:53:27.754+05:30  INFO 5284 --- [chargingservice] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T05:53:28.027+05:30  INFO 5284 --- [chargingservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T05:53:28.250+05:30  INFO 5284 --- [chargingservice] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-09T05:53:30.309+05:30  WARN 5284 --- [chargingservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-09T05:53:32.508+05:30  INFO 5284 --- [chargingservice] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-08-09T05:53:32.619+05:30  INFO 5284 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : Started ChargingserviceApplication in 20.19 seconds (process running for 24.803)
+2026-08-09T05:54:50.328+05:30  INFO 5284 --- [chargingservice] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-09T05:54:50.335+05:30  INFO 5284 --- [chargingservice] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-09T05:54:50.338+05:30  INFO 5284 --- [chargingservice] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-09T05:55:50.830+05:30  INFO 5284 --- [chargingservice] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-09T05:55:50.841+05:30  INFO 5284 --- [chargingservice] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-09T05:55:50.849+05:30  INFO 5284 --- [chargingservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T05:55:50.857+05:30  INFO 5284 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-09T05:55:50.874+05:30  INFO 5284 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-09T05:56:09.476+05:30  INFO 18544 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : Starting ChargingserviceApplication using Java 25.0.1 with PID 18544 (C:\Users\Danish\Downloads\chargingservice\chargingservice\target\classes started by Danish in C:\Users\Danish\Downloads\chargingservice)
+2026-08-09T05:56:09.488+05:30  INFO 18544 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T05:56:12.747+05:30  INFO 18544 --- [chargingservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T05:56:12.962+05:30  INFO 18544 --- [chargingservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 181 ms. Found 2 JPA repository interfaces.
+2026-08-09T05:56:14.621+05:30  INFO 18544 --- [chargingservice] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-08-09T05:56:14.671+05:30  INFO 18544 --- [chargingservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T05:56:14.671+05:30  INFO 18544 --- [chargingservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-09T05:56:14.817+05:30  INFO 18544 --- [chargingservice] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5123 ms
+2026-08-09T05:56:15.519+05:30  INFO 18544 --- [chargingservice] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T05:56:15.839+05:30  INFO 18544 --- [chargingservice] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-08-09T05:56:17.944+05:30  INFO 18544 --- [chargingservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T05:56:18.044+05:30  INFO 18544 --- [chargingservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-09T05:56:18.592+05:30  INFO 18544 --- [chargingservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@44aeae34
+2026-08-09T05:56:18.597+05:30  INFO 18544 --- [chargingservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-09T05:56:18.832+05:30  INFO 18544 --- [chargingservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/chargingservice]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.11
+	Default catalog/schema: chargingservice/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T05:56:22.273+05:30  INFO 18544 --- [chargingservice] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T05:56:22.697+05:30  INFO 18544 --- [chargingservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T05:56:22.889+05:30  INFO 18544 --- [chargingservice] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-09T05:56:23.661+05:30  WARN 18544 --- [chargingservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-09T05:56:24.557+05:30  INFO 18544 --- [chargingservice] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-08-09T05:56:24.571+05:30  INFO 18544 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : Started ChargingserviceApplication in 17.49 seconds (process running for 19.264)
+2026-08-09T05:56:43.666+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-09T05:56:43.671+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-09T05:56:43.676+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-08-09T05:56:45.596+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-3] c.d.c.service.TopupService               : Topup done successfully for customer: 98482
+2026-08-09T05:56:45.662+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-3] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
+2026-08-09T05:56:59.834+05:30  WARN 18544 --- [chargingservice] [http-nio-8081-exec-1] c.d.c.service.TopupService               : Meter Number does not exists: 98481
+2026-08-09T05:58:18.122+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-6] c.d.c.service.TopupService               : Topup done successfully for customer: 98482
+2026-08-09T05:58:18.130+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-6] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
