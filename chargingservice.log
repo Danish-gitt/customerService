@@ -203,3 +203,186 @@
 2026-08-09T05:56:59.834+05:30  WARN 18544 --- [chargingservice] [http-nio-8081-exec-1] c.d.c.service.TopupService               : Meter Number does not exists: 98481
 2026-08-09T05:58:18.122+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-6] c.d.c.service.TopupService               : Topup done successfully for customer: 98482
 2026-08-09T05:58:18.130+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-6] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
+2026-08-09T06:10:02.726+05:30  WARN 18544 --- [chargingservice] [http-nio-8081-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-08-09T06:10:14.225+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-10] c.d.c.service.TopupService               : Topup done successfully for customer: 98482
+2026-08-09T06:10:14.242+05:30  INFO 18544 --- [chargingservice] [http-nio-8081-exec-10] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
+2026-08-09T06:43:36.064+05:30  INFO 18544 --- [chargingservice] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-09T06:43:36.091+05:30  INFO 18544 --- [chargingservice] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-09T06:43:36.114+05:30  INFO 18544 --- [chargingservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T06:43:36.149+05:30  INFO 18544 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-09T06:43:36.228+05:30  INFO 18544 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-09T06:46:37.119+05:30  INFO 8200 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : Starting ChargingserviceApplication using Java 25.0.1 with PID 8200 (C:\Users\Danish\Downloads\chargingservice\chargingservice\target\classes started by Danish in C:\Users\Danish\Downloads\chargingservice)
+2026-08-09T06:46:37.130+05:30  INFO 8200 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T06:46:39.465+05:30  INFO 8200 --- [chargingservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T06:46:39.616+05:30  INFO 8200 --- [chargingservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 2 JPA repository interfaces.
+2026-08-09T06:46:40.890+05:30  INFO 8200 --- [chargingservice] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-08-09T06:46:40.927+05:30  INFO 8200 --- [chargingservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T06:46:40.928+05:30  INFO 8200 --- [chargingservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-09T06:46:41.059+05:30  INFO 8200 --- [chargingservice] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3718 ms
+2026-08-09T06:46:41.491+05:30  INFO 8200 --- [chargingservice] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T06:46:41.605+05:30  INFO 8200 --- [chargingservice] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-08-09T06:46:42.786+05:30  INFO 8200 --- [chargingservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T06:46:42.858+05:30  INFO 8200 --- [chargingservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-09T06:46:43.240+05:30  INFO 8200 --- [chargingservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@646e6d07
+2026-08-09T06:46:43.247+05:30  INFO 8200 --- [chargingservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-09T06:46:43.434+05:30  INFO 8200 --- [chargingservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/chargingservice]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.11
+	Default catalog/schema: chargingservice/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T06:46:45.985+05:30  INFO 8200 --- [chargingservice] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T06:46:46.266+05:30  INFO 8200 --- [chargingservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T06:46:46.446+05:30  INFO 8200 --- [chargingservice] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-09T06:46:47.232+05:30  WARN 8200 --- [chargingservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-09T06:46:47.971+05:30  INFO 8200 --- [chargingservice] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-08-09T06:46:47.983+05:30  INFO 8200 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : Started ChargingserviceApplication in 12.388 seconds (process running for 13.889)
+2026-08-09T06:48:36.641+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-09T06:48:36.642+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-09T06:48:36.645+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-09T06:48:38.460+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-1] c.d.c.service.CustomerManagement         : New customer added successfully :Customer(meterNumber=34690, msisdn=8271876061, customerName=Danish, address=Kolkata, meterType=FREE, balance=0, createdOn=null, updatedOn=null, topups=[])
+2026-08-09T06:48:39.157+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-1] c.d.c.service.CustomerManagement         : Meter API response: MeterResponse(meterNumber=34690, msisdn=8271876061, customerName=Danish, address=Kolkata, meterType=FREE, meterStatus=INACTIVE)
+2026-08-09T06:48:39.158+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-1] c.d.c.service.CustomerManagement         : Meter created successfully :MeterRequest(meterNumber=34690, msisdn=8271876061, customerName=Danish, address=Kolkata, meterType=FREE, meterStatus=INACTIVE)
+2026-08-09T06:49:57.315+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-5] c.d.c.service.TopupService               : Topup done successfully for customer: 34690
+2026-08-09T06:49:57.354+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-5] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
+2026-08-09T06:49:57.463+05:30  WARN 8200 --- [chargingservice] [http-nio-8081-exec-5] c.d.c.service.TopupService               : Meter Status will remain same for the meter: 34690INACTIVE
+2026-08-09T06:50:51.174+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-6] c.d.c.service.TopupService               : Topup done successfully for customer: 34690
+2026-08-09T06:50:51.185+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-6] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
+2026-08-09T06:50:51.382+05:30 ERROR 8200 --- [chargingservice] [http-nio-8081-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.client.RestClientException: Error while extracting response for type [com.danish.chargingservice.enums.MeterStatus] and content type [application/json]] with root cause
+
+tools.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `com.danish.chargingservice.enums.MeterStatus` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); byte offset: #0]
+	at tools.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63) ~[jackson-databind-3.1.4.jar:3.1.4]
+	at tools.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1863) ~[jackson-databind-3.1.4.jar:3.1.4]
+	at tools.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1659) ~[jackson-databind-3.1.4.jar:3.1.4]
+	at tools.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1590) ~[jackson-databind-3.1.4.jar:3.1.4]
+	at tools.jackson.databind.deser.jdk.EnumDeserializer.deserialize(EnumDeserializer.java:214) ~[jackson-databind-3.1.4.jar:3.1.4]
+	at tools.jackson.databind.deser.DeserializationContextExt.readRootValue(DeserializationContextExt.java:266) ~[jackson-databind-3.1.4.jar:3.1.4]
+	at tools.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:1888) ~[jackson-databind-3.1.4.jar:3.1.4]
+	at tools.jackson.databind.ObjectReader.readValue(ObjectReader.java:1270) ~[jackson-databind-3.1.4.jar:3.1.4]
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.readJavaType(AbstractJacksonHttpMessageConverter.java:352) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.http.converter.AbstractJacksonHttpMessageConverter.read(AbstractJacksonHttpMessageConverter.java:319) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.client.DefaultRestClient.readWithMessageConverters(DefaultRestClient.java:246) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.readBody(DefaultRestClient.java:931) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.lambda$toEntityInternal$0(DefaultRestClient.java:871) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:617) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:572) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:747) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:924) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntityInternal(DefaultRestClient.java:870) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toEntity(DefaultRestClient.java:859) ~[spring-web-7.0.8.jar:7.0.8]
+	at com.danish.chargingservice.service.TopupService.addBalance(TopupService.java:67) ~[classes/:na]
+	at com.danish.chargingservice.controller.CustomerController.topup(CustomerController.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-08-09T06:51:48.605+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-8] c.d.c.service.TopupService               : Topup done successfully for customer: 34690
+2026-08-09T06:51:48.613+05:30  INFO 8200 --- [chargingservice] [http-nio-8081-exec-8] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
+2026-08-09T06:51:48.663+05:30  WARN 8200 --- [chargingservice] [http-nio-8081-exec-8] c.d.c.service.TopupService               : Meter Status will remain same for the meter: 34690ACTIVE
+2026-08-09T07:06:56.608+05:30  INFO 8200 --- [chargingservice] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-09T07:06:56.622+05:30  INFO 8200 --- [chargingservice] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-09T07:06:56.631+05:30  INFO 8200 --- [chargingservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T07:06:56.636+05:30  INFO 8200 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-09T07:06:56.655+05:30  INFO 8200 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-09T07:08:38.956+05:30  INFO 12756 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : Starting ChargingserviceApplication using Java 25.0.1 with PID 12756 (C:\Users\Danish\Downloads\chargingservice\chargingservice\target\classes started by Danish in C:\Users\Danish\Downloads\chargingservice)
+2026-08-09T07:08:38.966+05:30  INFO 12756 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T07:08:43.731+05:30  INFO 12756 --- [chargingservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T07:08:44.256+05:30  INFO 12756 --- [chargingservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 462 ms. Found 2 JPA repository interfaces.
+2026-08-09T07:08:46.924+05:30  INFO 12756 --- [chargingservice] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-08-09T07:08:46.990+05:30  INFO 12756 --- [chargingservice] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T07:08:46.993+05:30  INFO 12756 --- [chargingservice] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-09T07:08:47.248+05:30  INFO 12756 --- [chargingservice] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 7970 ms
+2026-08-09T07:08:48.302+05:30  INFO 12756 --- [chargingservice] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T07:08:48.632+05:30  INFO 12756 --- [chargingservice] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-08-09T07:08:51.430+05:30  INFO 12756 --- [chargingservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T07:08:51.538+05:30  INFO 12756 --- [chargingservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-09T07:08:52.039+05:30  INFO 12756 --- [chargingservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@44aeae34
+2026-08-09T07:08:52.044+05:30  INFO 12756 --- [chargingservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-09T07:08:52.285+05:30  INFO 12756 --- [chargingservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/chargingservice]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.11
+	Default catalog/schema: chargingservice/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T07:08:55.620+05:30  INFO 12756 --- [chargingservice] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T07:08:56.134+05:30  INFO 12756 --- [chargingservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T07:08:56.618+05:30  INFO 12756 --- [chargingservice] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-09T07:08:57.972+05:30  WARN 12756 --- [chargingservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-09T07:08:58.780+05:30  INFO 12756 --- [chargingservice] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-08-09T07:08:58.792+05:30  INFO 12756 --- [chargingservice] [main] c.d.c.ChargingserviceApplication         : Started ChargingserviceApplication in 23.354 seconds (process running for 27.397)
+2026-08-09T07:09:07.487+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-09T07:09:07.488+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-09T07:09:07.494+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-08-09T07:09:30.796+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-3] c.d.c.service.CustomerManagement         : New customer added successfully :Customer(meterNumber=59369, msisdn=8271876061, customerName=Danish, address=Kolkata, meterType=FREE, balance=0, createdOn=null, updatedOn=null, topups=[])
+2026-08-09T07:09:33.140+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-3] c.d.c.service.CustomerManagement         : Meter API response: MeterResponse(meterNumber=59369, msisdn=8271876061, customerName=Danish, address=Kolkata, meterType=FREE, meterStatus=INACTIVE)
+2026-08-09T07:09:33.143+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-3] c.d.c.service.CustomerManagement         : Meter created successfully :MeterRequest(meterNumber=59369, msisdn=8271876061, customerName=Danish, address=Kolkata, meterType=FREE, meterStatus=INACTIVE)
+2026-08-09T07:10:32.885+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-5] c.d.c.service.TopupService               : Topup done successfully for customer: 59369
+2026-08-09T07:10:32.930+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-5] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
+2026-08-09T07:10:33.035+05:30  WARN 12756 --- [chargingservice] [http-nio-8081-exec-5] c.d.c.service.TopupService               : Meter Status will remain same for the meter: 59369INACTIVE
+2026-08-09T07:10:54.896+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-7] c.d.c.service.TopupService               : Topup done successfully for customer: 59369
+2026-08-09T07:10:54.908+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-7] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
+2026-08-09T07:10:55.378+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-7] c.d.c.service.TopupService               : MeterStatus updated to ACTIVE: 59369
+2026-08-09T07:12:42.878+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-9] c.d.c.service.TopupService               : Topup done successfully for customer: 59369
+2026-08-09T07:12:42.885+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-9] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
+2026-08-09T07:12:43.260+05:30  WARN 12756 --- [chargingservice] [http-nio-8081-exec-9] c.d.c.service.TopupService               : Meter Status will remain same for the meter: 59369ACTIVE
+2026-08-09T07:13:18.709+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-1] c.d.c.service.TopupService               : Topup done successfully for customer: 59369
+2026-08-09T07:13:18.716+05:30  INFO 12756 --- [chargingservice] [http-nio-8081-exec-1] c.d.c.service.TopupService               : Entry made in topup table: [FAILED toString()]
+2026-08-09T07:13:18.763+05:30  WARN 12756 --- [chargingservice] [http-nio-8081-exec-1] c.d.c.service.TopupService               : Meter Status will remain same for the meter: 59369ACTIVE
+2026-08-09T07:14:10.885+05:30  INFO 12756 --- [chargingservice] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-09T07:14:10.901+05:30  INFO 12756 --- [chargingservice] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-09T07:14:10.910+05:30  INFO 12756 --- [chargingservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T07:14:10.916+05:30  INFO 12756 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-09T07:14:10.931+05:30  INFO 12756 --- [chargingservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

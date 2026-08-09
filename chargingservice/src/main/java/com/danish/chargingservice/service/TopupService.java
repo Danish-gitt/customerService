@@ -25,7 +25,9 @@ public class TopupService {
     private final RestClient restClient;
 
     public CustomerResponse addBalance(Long meterNumber,int amount){
+        CustomerResponse response = new CustomerResponse();
         if(customerRepo.existsById(meterNumber)){
+            //Adding balance
             Customer foundCustomer = customerRepo.findById(meterNumber).get();
             BigDecimal currentBalance = foundCustomer.getBalance();
             BigDecimal newBalance = currentBalance.add(BigDecimal.valueOf(amount));
@@ -33,27 +35,47 @@ public class TopupService {
             customerRepo.save(foundCustomer);
             log.info("Topup done successfully for customer: {}",meterNumber);
 
+
+            //Making topup entry
             Topup topup = new Topup();
             topup.setAmount(amount);
             topup.setCustomer(foundCustomer);
             topupRepo.save(topup);
             log.info("Entry made in topup table: {}",topup);
 
-            CustomerResponse response = new CustomerResponse();
-            response.setMeterNumber(foundCustomer.getMeterNumber());
-            response.setMsisdn(foundCustomer.getMsisdn());
-            response.setCustomerName(foundCustomer.getCustomerName());
-            response.setAddress(foundCustomer.getAddress());
-            response.setMeterType(foundCustomer.getMeterType());
-
+            //Checking current meterStatus
             ResponseEntity<MeterStatus> statusResponse = restClient.get()
                     .uri("http://localhost:8080/meter/getStatus/{meterNumber}",meterNumber)
                     .retrieve()
                     .toEntity(MeterStatus.class);
 
-            response.setMeterStatus(statusResponse.getBody());
-            response.setBalance(foundCustomer.getBalance());
 
+
+            //Changing meter status
+            if(statusResponse.getBody()==MeterStatus.INACTIVE && foundCustomer.getBalance().compareTo(BigDecimal.TEN)>0){
+                ResponseEntity<MeterResponse> newStatus=restClient.post()
+                        .uri("http://localhost:8080/meter/update/{meterNumber}/{meterStatus}",meterNumber,MeterStatus.ACTIVE)
+                        .retrieve()
+                        .toEntity(MeterResponse.class);
+                if (newStatus.getStatusCode().is2xxSuccessful()) {
+                    log.info("MeterStatus updated to ACTIVE: {}", meterNumber);
+                    response.setMeterStatus(MeterStatus.ACTIVE);
+                } else {
+                    log.warn("Failed to update meter status for: {}", meterNumber);
+                    response.setMeterStatus(statusResponse.getBody());
+                }
+            }else{
+                log.warn("Meter Status will remain same for the meter: {}{}",meterNumber,statusResponse.getBody());
+                response.setMeterStatus(statusResponse.getBody());
+            }
+
+            //creating response
+            response.setMeterNumber(foundCustomer.getMeterNumber());
+            response.setMsisdn(foundCustomer.getMsisdn());
+            response.setCustomerName(foundCustomer.getCustomerName());
+            response.setAddress(foundCustomer.getAddress());
+            response.setMeterType(foundCustomer.getMeterType());
+            response.setBalance(foundCustomer.getBalance());
             return response;
 
         }else{
