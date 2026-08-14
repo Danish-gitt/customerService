@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class ChargingScheduler {
     private final Deduction deduction;
 
-    @Scheduled(fixedRate = 60000)
+    @Scheduled(fixedRate = 30000)
     public void callDeduction(){
         log.info("Deduction Scheduler started");
         deduction.updateBalance();

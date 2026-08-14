@@ -38,5 +38,10 @@ public class CustomerController {
         return ResponseEntity.status(HttpStatus.CREATED).body(topupService.addBalance(meterNumber,amount));
     }
 
+    @GetMapping("/balance/{meterNumber}")
+    public ResponseEntity<CustomerResponse> getBalance(@PathVariable Long meterNumber){
+        return ResponseEntity.status(HttpStatus.FOUND).body(customerManagement.getBalance(meterNumber));
+    }
+
 
 }

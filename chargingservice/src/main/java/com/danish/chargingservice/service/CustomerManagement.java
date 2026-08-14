@@ -1,10 +1,12 @@
 package com.danish.chargingservice.service;
 
 import com.danish.chargingservice.dto.CustomerRequest;
+import com.danish.chargingservice.dto.CustomerResponse;
 import com.danish.chargingservice.dto.MeterRequest;
 import com.danish.chargingservice.dto.MeterResponse;
 import com.danish.chargingservice.entitiy.Customer;
 import com.danish.chargingservice.enums.MeterStatus;
+import com.danish.chargingservice.exception.MeterNotFoundException;
 import com.danish.chargingservice.repository.CustomerRepo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -68,6 +70,29 @@ public class CustomerManagement {
         }
 
         return newCustomer;
+
+    }
+
+
+
+
+    public CustomerResponse getBalance(Long meterNumber){
+        if(!customerRepo.existsById(meterNumber)){
+            log.warn("meter does not exist: {}",meterNumber);
+            throw new MeterNotFoundException("meter does not exist: "+meterNumber);
+        }
+
+        Customer foundCustomer = customerRepo.findById(meterNumber).get();
+        //creating response
+        CustomerResponse response = new CustomerResponse();
+        response.setMeterNumber(foundCustomer.getMeterNumber());
+        response.setMsisdn(foundCustomer.getMsisdn());
+        response.setCustomerName(foundCustomer.getCustomerName());
+        response.setAddress(foundCustomer.getAddress());
+        response.setMeterType(foundCustomer.getMeterType());
+        response.setBalance(foundCustomer.getBalance());
+        return response;
+
 
     }
 }

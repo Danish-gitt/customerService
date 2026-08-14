@@ -21,5 +21,11 @@ public class GlobalExceptionHandler {
                 .body(ex.getMessage());
     }
 
+    @ExceptionHandler(ChargingAlreadyDoneException.class)
+    public ResponseEntity<String> handleChargingAlreadyDoneException(ChargingAlreadyDoneException ex){
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(ex.getMessage());
+    }
+
 
 }
